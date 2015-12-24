@@ -37,7 +37,7 @@ func! s:gh_line() range
 
     " String Setup
     let blob = "/blob/"
-    let sed_cmd = "sed 's\/git@\/https:\\/\\/\/g; s\/.git$\/\/g; s\/\.com:\/.com\\/\/g'"
+    let sed_cmd = "sed 's,git@,https://,g; s,.git$,,g; s,\.com:,\.com/,g'"
 
     " Get Directory & File Names
     let fullPath = resolve(expand("%:p"))
